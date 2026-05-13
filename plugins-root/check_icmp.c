@@ -1274,7 +1274,7 @@ static int recvfrom_wto(int sock, void *buf, unsigned int len,
   char ans_data[4096];
   struct msghdr hdr;
   struct iovec iov;
-  struct cmsghdr *chdr;
+  struct cmsghdr *chdr = NULL;
 
   if (!*timo) {
     if (debug)
