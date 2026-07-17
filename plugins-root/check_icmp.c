@@ -1334,6 +1334,9 @@ static int recvfrom_wto(int sock, void *buf, unsigned int len,
   if (!chdr) {
     gettimeofday(tv, &tz);
   }
+#else
+  gettimeofday(tv, &tz);
+#endif
   return (ret);
 }
 
